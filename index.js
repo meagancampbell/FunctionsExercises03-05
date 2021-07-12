@@ -6,11 +6,7 @@
 //d) Below the function, define and initialize a variable to hold a string.
 //e) Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 //f) Use method chaining to reduce the lines of code within the function.
-let arrayTest1 = ['ABBA', 'KISS', 'BEATLES'];
-let arrayTest2 = [123, 8897, 42, 1168, 8675309];
-let arrayTest3 = ['signs', 'world', 123, 'cougar'];
-let stringExample = 'Capitalized Letters';
-let revNumbers = 9139723030;
+
 
 
 function reverseCharacters(input) {
@@ -42,14 +38,24 @@ console.log(reverseCharacters("I love the smell of code in the morning"));
 //d) Add the reversed string (or number) to the array defined in part ‘a’.
 //e) Return the final, reversed array.
 //f) Be sure to print the results from each test case in order to verify your code.
-
+let arrayTest1 = ['ABBA', 'KISS', 'BEATLES'];
+let arrayTest2 = [123, 8897, 42, 1168, 8675309];
+let arrayTest3 = ['signs', 'world', 123, 'cougar'];
+let stringExample = 'Capitalized Letters';
+let revNumbers = 9139723030;
 
 function newChangeArray(array){
   let newArray = [];
-  for (let i = 0; i < array.length; i++) {
-    newArrayout.unshift(reverseCharacters(array[i]));
+  for(let i = 0; i < array.length; i++) {
+    newArray.unshift(reverseCharacters(array[i]));
   }
   return newArray;
 }
 
-/* The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array./*
+console.log(newChangeArray(arrayTest1));
+console.log(newChangeArray(arrayTest2));
+console.log(newChangeArray(arrayTest3));
+console.log(newChangeArray(stringExample));
+console.log(newChangeArray(revNumbers));
+
+//The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
