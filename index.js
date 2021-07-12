@@ -6,28 +6,28 @@
 //d) Below the function, define and initialize a variable to hold a string.
 //e) Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 //f) Use method chaining to reduce the lines of code within the function.
-let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
+let arrayTest1 = ['ABBA', 'KISS', 'BEATLES'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
-let arrayTest3 = ['hello', 'world', 123, 'orange'];
+let arrayTest3 = ['signs', 'world', 123, 'cougar'];
 let stringExample = 'Capitalized Letters';
-let revNumbers = 8675309;
+let revNumbers = 9139723030;
 
-function reverseCharacters(str){
-  if(typeof (str) === 'string' ){
-    let reverseString = str.split('').reverse().join('');
-    console.log(reverseString);
-    return reverseString;
-  } else if (typeof (str)=== 'number'){
-    str = String(str);
-    let reverseNumbers = str.split('').reverse().join('');
-    console.log(reverseNumbers);
-    reverseNumbers = Number(reverseNumbers);
-    console.log(reverseNumbers + ' look here');
-  }
 
-  
-}
-console.log(reverseCharacters(8675309));
+function reverseCharacters(input) {
+
+    if(typeof(input)==='string') {
+      return input.split('').reverse().join('');
+    }
+    if(typeof(input)==='number') {
+      return Number(input.toString().split('').reverse().join(''));
+    }
+};
+
+console.log(reverseCharacters(123));
+console.log(reverseCharacters("ROCK"));
+console.log(reverseCharacters("BEATLES"));
+console.log(reverseCharacters("Capitalized Letters"));
+console.log(reverseCharacters("I love the smell of code in the morning"));
 
 //2) The 'split' method does not work on numbers, but we want the function to return a number with all the digits reversed (e.g. 1234 converts to 4321 and NOT the string "4321")
 //a) Add an if statement to your reverseCharacters function to check the typeof the parameter.
@@ -42,15 +42,14 @@ console.log(reverseCharacters(8675309));
 //d) Add the reversed string (or number) to the array defined in part ‘a’.
 //e) Return the final, reversed array.
 //f) Be sure to print the results from each test case in order to verify your code.
- 
+
+
 function newChangeArray(array){
-  let newArray =[];
+  let newArray = [];
   for (let i = 0; i < array.length; i++) {
-    newArray.push(reverseCharacters(array[i]));
-    console.log(newArray);
+    newArrayout.unshift(reverseCharacters(array[i]));
   }
   return newArray;
 }
-console.log(newChangeArray(arrayTest2));
-// console.log(newChangeArray(arrayTest2);
 
+/* The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array./*
